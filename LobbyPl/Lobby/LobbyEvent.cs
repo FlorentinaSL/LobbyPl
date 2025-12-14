@@ -1,6 +1,8 @@
 ﻿using System.IO;
 using Exiled.API.Features;
 using Exiled.Events.EventArgs.Player;
+using Hints;
+using PlayerRoles;
 using ProjectMER.Features;
 using ProjectMER.Features.Objects;
 using UnityEngine;
@@ -29,6 +31,10 @@ namespace LobbyPl.Lobby
                     Quaternion.identity
                 );
             }
+            ////Change Role to ClassD
+            //Change role to Tutorial
+            ev.Player.Role.Set(RoleTypeId.Tutorial, RoleSpawnFlags.None);
+            
             //Loads the lobby lock system
             if (Player.List.Count < Main.Instance.Config.MaxPlayersInLobby)
             {
@@ -41,7 +47,6 @@ namespace LobbyPl.Lobby
                 Round.IsLobbyLocked = false;
             }
         }
-        
         //Cleans up the schematic on round start
         private void OnRoundStarted()
         {
