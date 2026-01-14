@@ -24,7 +24,7 @@ namespace LobbyPl
         public override string Author { get; } = "Florentina <3";
         public override string Prefix { get; } = "lobby";
         public override PluginPriority Priority { get; } = PluginPriority.Low;
-        public override Version Version { get; } = new Version(1,0,0);
+        public override Version Version { get; } = new Version(1,2,0);
         public override Version RequiredExiledVersion { get; } = new Version(9, 10, 2);
 
         /// <summary>

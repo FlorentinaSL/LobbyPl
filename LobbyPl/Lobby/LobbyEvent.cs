@@ -44,6 +44,8 @@ namespace LobbyPl.Lobby
             else
             {
                 Map.Broadcast(10, "Round is beggining!");
+                //patch 1.2.0
+                ev.Player.Role.Set(RoleTypeId.Spectator, RoleSpawnFlags.None);
                 Round.IsLobbyLocked = false;
             }
         }
